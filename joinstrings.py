@@ -1,7 +1,7 @@
 from sys import stdin,stdout,setrecursionlimit
 from collections import deque
-# increase recursion limit
-setrecursionlimit(10**6)
+# increase recursion limit since default recursion limit is 1000 and N can be at most 10000
+setrecursionlimit(10**7)
 
 def recursive_graph_transversal(graphs,strings,last_index):
     #directed graph traversal
