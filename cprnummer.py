@@ -1,0 +1,1 @@
+print((lambda num: 0 if (4*int(num[0]) + 3*int(num[1]) + 2*int(num[2]) + 7*int(num[3])+ 6*int(num[4]) + 5*int(num[5]) + 4*int(num[7]) + 3*int(num[8]) + 2*int(num[9]) + int(num[10]))%11 else 1)(input().strip()))
