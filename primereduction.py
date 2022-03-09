@@ -1,6 +1,6 @@
 from math import sqrt
 from sys import stdin,stdout
-
+# 2.62 seconds runtime; can do better
 def PrimeFactor(n): #exponent form
     factors = {}
     while not n%2:
