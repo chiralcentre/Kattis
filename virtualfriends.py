@@ -1,5 +1,5 @@
 from sys import stdin,stdout
-
+#UFDS skeleton code was copied over from almostunionfind, and hence some methods are not relevant to this question.
 class UnionFind:
     def __init__(self,N):
         self.p2 = [i for i in range(N)] #keeps track of original parent when a move is made
