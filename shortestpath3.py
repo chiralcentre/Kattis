@@ -17,15 +17,13 @@ while True:
         for u,v,w in edgeList:
             if D[u] != INF and D[v] > D[u] + w: #need to check if D[u] is reachable since w can be negative
                 D[v] = D[u] + w
-    negativeCycle = [False for _ in range(n)]
     cycleDetected = True
     while cycleDetected: #O(nm)
         cycleDetected = False
         for u,v,w in edgeList: 
-            if D[u] != INF and D[v] > D[u] + w and not negativeCycle[v]:
+            if D[u] != INF and D[v] > D[u] + w and D[v] != -INF:
                 D[v] = -INF #arbitrarily small number so future relaxation can occur
                 cycleDetected = True
-                negativeCycle[v] = True
     for i in range(q): #O(q)
         end = int(stdin.readline())
-        stdout.write(f'Impossible\n') if D[end] == INF else stdout.write(f'-Infinity\n') if negativeCycle[end] else stdout.write(f'{D[end]}\n')
+        stdout.write(f'Impossible\n') if D[end] == INF else stdout.write(f'-Infinity\n') if D[end] == -INF else stdout.write(f'{D[end]}\n')
