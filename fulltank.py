@@ -7,7 +7,6 @@ def modifiedDjikstra(c,s,e,n):
     INF = 1000000000 #use 1 billion to represent infinity
     P = [[INF for i in range(c+1)] for j in range(n)] # P[a][b] represents the lowest price of reaching city a with fuel level b
     P[s][0] = 0; PQ = [(0,s,0)]
-    lowest = INF
     while PQ:
         cost,u,f = heappop(PQ)
         if u == e: #end city is reached and lowest cost is attained
