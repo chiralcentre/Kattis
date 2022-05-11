@@ -12,6 +12,6 @@ while True:
     elif response == "too high":
         higher = min(higher,number) #take the tighter upper bound
     elif response == "too low":
-        lower = max(lower,number)
+        lower = max(lower,number) #take the tighter lower bound
             
     
