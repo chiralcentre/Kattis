@@ -11,7 +11,7 @@ for i in range(n):
         adjListTranspose[v].append(s)
     usedIDs.append(s)
 
-#perform DFS on transposed graph to check which streets can reach surrounding circular riad system in O(n + E) time where E is the total number of edges
+#perform DFS on transposed graph to check which streets can reach surrounding circular road system in O(n + E) time where E is the total number of edges
 visited = [False for _ in range(1000)]; visited[0] = True
 frontier = [0]
 while frontier:
