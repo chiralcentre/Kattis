@@ -1,6 +1,7 @@
 from sys import stdin,stdout
 from heapq import heappush,heappop,heapify
 
+# think backwards: what is the minimum ink required to merge blocks of distinct colors into one?
 for _ in range(int(stdin.readline())):
     N = int(stdin.readline())
     canvasses = list(map(int,stdin.readline().split()))
@@ -16,3 +17,4 @@ for _ in range(int(stdin.readline())):
         sol += A + B
         heappush(canvasses,A+B)
     stdout.write(f"{sol}\n")
+
