@@ -34,7 +34,6 @@ public class distracted {
                     if (unmarried.contains(v)) return "1";
                     frontier.push(v);
                 }
-                System.out.println(frontier);
             }
             return "?";
         }
