@@ -33,7 +33,7 @@ for _ in range(K): #pairs can be done in any order
     UFDS.unionSet(a-1,b-1)
 # array can only be sorted in increasing order if i and n-i-1 are in the same set for all i
 possible = True
-for i in range(N):
+for i in range(N >> 1):
     if UFDS.findSet(i) != UFDS.findSet(N-i-1):
         possible = False
         break
