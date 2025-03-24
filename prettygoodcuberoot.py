@@ -1,12 +1,23 @@
 from sys import stdin,stdout
-from math import floor,ceil
 
+def solve(n):
+    L,R = 1,pow(10,170)
+    while L < R:
+        m = L + ((R - L) >> 1)
+        res = pow(m,3)
+        if res < n:
+            L = m + 1
+        elif res == n:
+            return m
+        else:
+            R = m - 1
+    ans,best = -1,pow(10,500)
+    for i in range(L - 1, L + 2):
+        diff = abs(pow(i,3) - n)
+        if diff < best:
+            ans,best = i,diff
+    return ans
+        
 for line in stdin:
     n = int(line)
-    approx = pow(n,1 / 3)
-    a,b = floor(approx),ceil(approx)
-    d1,d2 = abs(n - pow(a,3)),abs(n - pow(b,3))
-    if d1 < d2:
-        stdout.write(f"{a}\n")
-    else:
-        stdout.write(f"{b}\n")
+    stdout.write(f"{solve(n)}\n")
