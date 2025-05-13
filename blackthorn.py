@@ -1,0 +1,1 @@
+print("yes") if "kth" in input().strip() else print("no")
